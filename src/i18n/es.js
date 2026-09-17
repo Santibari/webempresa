@@ -1,0 +1,110 @@
+export default {
+  // NAV
+  'nav.services': 'Servicios',
+  'nav.how':      'Como trabajamos',
+  'nav.team':     'Equipo',
+  'nav.demos':    'Demos',
+  'nav.contact':  'Contacto',
+  'nav.cta':      'Habla con un experto',
+
+  // HERO
+  'hero.eyebrow':    'Tecnologia y consultoria para PYMES',
+  'hero.title':      'Transformamos tu negocio tradicional en',
+  'hero.accent':     'una empresa del futuro',
+  'hero.sub':        'Disenamos y desarrollamos software a la medida de negocios que quieren dar el salto digital, sin perder lo que ya funciona.',
+  'hero.cta':        'Habla con un experto',
+  'hero.ctaSec':     'Ver servicios',
+  'hero.proof1':     'negocios digitalizados',
+  'hero.proof2':     'semanas para el primer piloto',
+  'hero.proof3':     'soluciones a la medida',
+
+  // SERVICES
+  'services.kicker': 'Servicios',
+  'services.title':  'Todo lo que tu negocio necesita para operar en digital',
+  'services.desc':   'Combinamos desarrollo, datos y estrategia en un solo equipo, para que no tengas que coordinar cinco proveedores distintos.',
+  'services.web.title':     'Desarrollo Web y Movil',
+  'services.web.desc':      'Aplicaciones y sitios a la medida de tu operacion: desde el sistema interno que ordena tu inventario hasta la app que usan tus clientes todos los dias.',
+  'services.ecom.title':    'E-commerce',
+  'services.ecom.desc':     'Tiendas en linea rapidas y faciles de administrar, conectadas a tu inventario y a tus canales de pago habituales.',
+  'services.ai.title':      'IA Aplicada',
+  'services.ai.desc':       'Automatiza tareas repetitivas y toma mejores decisiones con modelos entrenados sobre los datos reales de tu negocio.',
+  'services.consult.title': 'Consultoria Empresarial',
+  'services.consult.desc':  'Un diagnostico claro de donde estas hoy y que tecnologia realmente necesitas, sin sobrevender soluciones.',
+
+  // PROCESS
+  'process.kicker': 'Como trabajamos',
+  'process.title':  'Un proceso simple, pensado para negocios ocupados',
+  'process.s1.title': 'Analisis',
+  'process.s1.desc':  'Entendemos como opera tu negocio hoy: procesos, equipo y herramientas actuales, antes de proponer nada.',
+  'process.s2.title': 'Ecosistema Digital',
+  'process.s2.desc':  'Disenamos y construimos la solucion a la medida: web, app, tienda o automatizacion, integrada a lo que ya usas.',
+  'process.s3.title': 'Crecimiento',
+  'process.s3.desc':  'Acompanamos la puesta en marcha y ajustamos con datos reales, para que la herramienta mejore con el tiempo.',
+
+  // FOUNDERS
+  'founders.kicker': 'Equipo fundador',
+  'founders.title':  'Tres ingenieros detras de cada proyecto',
+  'founders.desc':   'Nos conocemos desde la universidad y fundamos LuckNova para llevar ese mismo rigor tecnico a negocios que aun no lo tienen.',
+  'founders.role':   'Cofundador',
+  'founders.tag':    'Ingeniero Informatico',
+
+  // DEMOS
+  'demos.kicker':       'Demos',
+  'demos.title':        'Mira lo que hemos construido',
+  'demos.desc':         'Proyectos reales, resultados concretos. Haz clic en Ver demo para explorar cada solucion.',
+  'demos.clientsLabel': 'Clientes y aliados',
+  'demos.btn':          'Ver demo',
+  'demos.soon':         'Proximamente',
+
+  // FORM
+  'form.kicker':          'Consultoria gratuita',
+  'form.title':           'Cuentanos de tu negocio y te contactamos',
+  'form.desc':            'Completa el formulario y uno de nosotros te escribe para agendar una llamada de 30 minutos, sin costo y sin compromiso.',
+  'form.side1.strong':    'Respuesta en 24 horas.',
+  'form.side1.text':      ' Te contactamos por correo o WhatsApp, lo que prefieras.',
+  'form.side2.strong':    'Sin propuesta generica.',
+  'form.side2.text':      ' La llamada es un diagnostico real de tu operacion.',
+  'form.side3.strong':    'Tus datos son solo para contactarte.',
+  'form.side3.text':      ' No compartimos tu informacion con terceros.',
+  'form.label.name':      'Nombre completo',
+  'form.label.business':  'Nombre del negocio',
+  'form.label.email':     'Correo electronico',
+  'form.label.phone':     'Telefono / WhatsApp',
+  'form.label.interest':  'Que te interesa digitalizar?',
+  'form.opt.default':     'Selecciona una opcion',
+  'form.opt.web':         'Desarrollo Web/Movil',
+  'form.opt.ecom':        'E-commerce',
+  'form.opt.ai':          'IA Aplicada',
+  'form.opt.consult':     'Consultoria Empresarial',
+  'form.opt.unsure':      'Aun no lo se',
+  'form.label.message':   'Cuentanos brevemente tu situacion (opcional)',
+  'form.ph.name':         'Ej. Maria Gomez',
+  'form.ph.business':     'Ej. Panaderia El Trigo',
+  'form.ph.email':        'tucorreo@negocio.com',
+  'form.ph.phone':        '300 000 0000',
+  'form.ph.message':      'Ej. Llevamos el inventario en Excel y se nos pierden pedidos...',
+  'form.submit':          'Solicitar consultoria gratuita',
+  'form.sending':         'Enviando...',
+  'form.success':         'Listo! Recibimos tu informacion y te contactaremos pronto.',
+  'form.error':           'No pudimos enviar tu solicitud. Intenta de nuevo o escribenos por WhatsApp.',
+  'form.note':            'Al enviar, aceptas que te contactemos sobre tu solicitud.',
+
+  // CTA BAND
+  'cta.title': 'Empecemos con una conversacion, no con una propuesta comercial',
+  'cta.desc':  'Agenda una consultoria gratuita de 30 minutos y te decimos, con honestidad, si la tecnologia te puede ayudar y como.',
+  'cta.btn':   'Agendar consultoria gratuita',
+  'cta.note':  'Sin compromiso · Respuesta en 24 horas',
+
+  // FOOTER
+  'footer.tagline':  'Ideas en codigo. Soluciones de software para negocios tradicionales que quieren crecer.',
+  'footer.services': 'Servicios',
+  'footer.company':  'Compania',
+  'footer.contact':  'Contacto',
+  'footer.how':      'Como trabajamos',
+  'footer.demos':    'Demos',
+  'footer.copyright':'Todos los derechos reservados.',
+  'footer.city':     'Bogota, Colombia',
+
+  // WHATSAPP
+  'wa.tooltip': 'Escribenos por WhatsApp',
+}

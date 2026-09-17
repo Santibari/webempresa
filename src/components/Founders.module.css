@@ -1,0 +1,27 @@
+.foundersGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+@media (max-width: 760px) { .foundersGrid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; } }
+.founderCard {
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); padding: 32px 28px 30px; text-align: center;
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+.founderCard:hover { background: var(--bg); box-shadow: 0 24px 48px -24px rgba(20,30,26,0.18); transform: translateY(-3px); }
+.founderPhoto {
+  width: 112px; height: 112px; border-radius: 50%; margin: 0 auto 20px;
+  background: linear-gradient(150deg, var(--green-light), var(--green));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 30px;
+  overflow: hidden; border: 4px solid var(--bg); box-shadow: 0 0 0 1px var(--line);
+}
+.founderPhoto img { width: 100%; height: 100%; object-fit: cover; }
+.founderName { font-size: 17px; font-weight: 700; font-family: 'Manrope', sans-serif; }
+.founderRole { font-size: 13.5px; color: var(--ink-soft); margin-top: 6px; }
+.founderTag {
+  display: inline-block; margin-top: 14px;
+  font-size: 12px; font-weight: 600; color: var(--green);
+  background: rgba(14,107,79,0.1); padding: 5px 12px; border-radius: 100px;
+}
+[data-theme="dark"] .founderTag {
+  background: rgba(63,207,142,0.12);
+  color: var(--green-light);
+}

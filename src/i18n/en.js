@@ -1,0 +1,110 @@
+export default {
+  // NAV
+  'nav.services': 'Services',
+  'nav.how':      'How we work',
+  'nav.team':     'Team',
+  'nav.demos':    'Demos',
+  'nav.contact':  'Contact',
+  'nav.cta':      'Talk to an expert',
+
+  // HERO
+  'hero.eyebrow':    'Technology & consulting for SMBs',
+  'hero.title':      'We transform your traditional business into',
+  'hero.accent':     'a company of the future',
+  'hero.sub':        'We design and develop tailor-made software for businesses ready to go digital, without losing what already works.',
+  'hero.cta':        'Talk to an expert',
+  'hero.ctaSec':     'View services',
+  'hero.proof1':     'businesses digitalized',
+  'hero.proof2':     'weeks to the first pilot',
+  'hero.proof3':     'tailor-made solutions',
+
+  // SERVICES
+  'services.kicker': 'Services',
+  'services.title':  'Everything your business needs to operate digitally',
+  'services.desc':   'We combine development, data, and strategy in one team, so you do not have to coordinate five different providers.',
+  'services.web.title':     'Web & Mobile Development',
+  'services.web.desc':      'Custom applications and sites for your operation: from the internal system that manages your inventory to the app your clients use every day.',
+  'services.ecom.title':    'E-commerce',
+  'services.ecom.desc':     'Fast, easy-to-manage online stores, connected to your inventory and your usual payment channels.',
+  'services.ai.title':      'Applied AI',
+  'services.ai.desc':       'Automate repetitive tasks and make better decisions with models trained on your real business data.',
+  'services.consult.title': 'Business Consulting',
+  'services.consult.desc':  'A clear diagnosis of where you are today and what technology you really need, without overselling solutions.',
+
+  // PROCESS
+  'process.kicker': 'How we work',
+  'process.title':  'A simple process, designed for busy businesses',
+  'process.s1.title': 'Analysis',
+  'process.s1.desc':  'We understand how your business operates today: processes, team and current tools, before proposing anything.',
+  'process.s2.title': 'Digital Ecosystem',
+  'process.s2.desc':  'We design and build the tailor-made solution: web, app, store or automation, integrated with what you already use.',
+  'process.s3.title': 'Growth',
+  'process.s3.desc':  'We accompany the launch and adjust with real data, so the tool improves over time.',
+
+  // FOUNDERS
+  'founders.kicker': 'Founding team',
+  'founders.title':  'Three engineers behind every project',
+  'founders.desc':   'We met at university and founded LuckNova to bring that same technical rigor to businesses that do not have it yet.',
+  'founders.role':   'Co-founder',
+  'founders.tag':    'Computer Engineer',
+
+  // DEMOS
+  'demos.kicker':       'Demos',
+  'demos.title':        'See what we have built',
+  'demos.desc':         'Real projects, concrete results. Click View demo to explore each solution.',
+  'demos.clientsLabel': 'Clients & partners',
+  'demos.btn':          'View demo',
+  'demos.soon':         'Coming soon',
+
+  // FORM
+  'form.kicker':          'Free consultation',
+  'form.title':           'Tell us about your business',
+  'form.desc':            'Fill out the form and one of us will reach out to schedule a free 30-minute call, no cost and no commitment.',
+  'form.side1.strong':    'Response within 24 hours.',
+  'form.side1.text':      ' We will reach out by email or WhatsApp, whichever you prefer.',
+  'form.side2.strong':    'No generic proposal.',
+  'form.side2.text':      ' The call is a real diagnosis of your operation.',
+  'form.side3.strong':    'Your data is only for contact.',
+  'form.side3.text':      ' We do not share your information with third parties.',
+  'form.label.name':      'Full name',
+  'form.label.business':  'Business name',
+  'form.label.email':     'Email address',
+  'form.label.phone':     'Phone / WhatsApp',
+  'form.label.interest':  'What do you want to digitalize?',
+  'form.opt.default':     'Select an option',
+  'form.opt.web':         'Web / Mobile Development',
+  'form.opt.ecom':        'E-commerce',
+  'form.opt.ai':          'Applied AI',
+  'form.opt.consult':     'Business Consulting',
+  'form.opt.unsure':      'I am not sure yet',
+  'form.label.message':   'Tell us briefly about your situation (optional)',
+  'form.ph.name':         'E.g. John Smith',
+  'form.ph.business':     'E.g. Smith Bakery',
+  'form.ph.email':        'youremail@business.com',
+  'form.ph.phone':        '300 000 0000',
+  'form.ph.message':      'E.g. We manage inventory in Excel and keep losing orders...',
+  'form.submit':          'Request free consultation',
+  'form.sending':         'Sending...',
+  'form.success':         'Done! We received your info and will reach out soon.',
+  'form.error':           'We could not send your request. Try again or reach out on WhatsApp.',
+  'form.note':            'By submitting, you agree to be contacted about your request.',
+
+  // CTA BAND
+  'cta.title': 'Let us start with a conversation, not a sales pitch',
+  'cta.desc':  'Schedule a free 30-minute consultation and we will tell you honestly if technology can help you and how.',
+  'cta.btn':   'Schedule free consultation',
+  'cta.note':  'No commitment · Response within 24 hours',
+
+  // FOOTER
+  'footer.tagline':  'Ideas in code. Software solutions for traditional businesses ready to grow.',
+  'footer.services': 'Services',
+  'footer.company':  'Company',
+  'footer.contact':  'Contact',
+  'footer.how':      'How we work',
+  'footer.demos':    'Demos',
+  'footer.copyright':'All rights reserved.',
+  'footer.city':     'Bogota, Colombia',
+
+  // WHATSAPP
+  'wa.tooltip': 'Message us on WhatsApp',
+}

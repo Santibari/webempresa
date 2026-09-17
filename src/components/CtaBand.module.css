@@ -1,0 +1,21 @@
+﻿.ctaBand { padding-top: 0; padding-bottom: 100px; }
+.ctaBox {
+  background: linear-gradient(155deg, var(--green-dark), #06392a 70%);
+  border-radius: 36px; padding: 80px 64px; color: #fff;
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: space-between; gap: 40px;
+}
+.ctaBox::before {
+  content: ''; position: absolute; width: 520px; height: 520px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(63,207,142,0.28), transparent 70%);
+  top: -220px; right: -140px;
+}
+.ctaBoxText { position: relative; z-index: 1; max-width: 520px; }
+.ctaBoxText h2 { color: #fff; font-size: clamp(26px,3vw,36px); line-height: 1.2; }
+.ctaBoxText p { color: rgba(255,255,255,0.72); margin-top: 16px; font-size: 16px; max-width: 440px; }
+.ctaBoxActions { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
+.note { font-size: 13px; color: rgba(255,255,255,0.6); }
+@media (max-width: 760px) {
+  .ctaBox { flex-direction: column; align-items: flex-start; padding: 52px 32px; border-radius: 28px; }
+  .ctaBoxActions { align-items: flex-start; }
+}

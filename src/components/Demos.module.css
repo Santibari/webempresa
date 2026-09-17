@@ -1,0 +1,118 @@
+.demosSection { background: var(--bg); }
+
+/* ── Logos strip ── */
+.logosStrip {
+  overflow: hidden; padding: 36px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 64px; position: relative;
+}
+.logosStrip::before, .logosStrip::after {
+  content: ''; position: absolute; top: 0; bottom: 0;
+  width: 80px; z-index: 2; pointer-events: none;
+}
+.logosStrip::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
+.logosStrip::after  { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+.logosTrack {
+  display: flex; gap: 40px; align-items: center;
+  width: max-content; animation: scrollLogos 28s linear infinite;
+}
+.logosTrack:hover { animation-play-state: paused; }
+@keyframes scrollLogos {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.logoItem {
+  display: flex; align-items: center; justify-content: center;
+  width: 130px; height: 50px; flex: none;
+  filter: grayscale(1) opacity(.45);
+  transition: filter .3s ease;
+}
+.logoItem:hover { filter: grayscale(0) opacity(1); }
+.logoItem img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.logoPlaceholder {
+  width: 100%; height: 100%;
+  background: var(--bg-soft); border: 1px dashed var(--line); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600; color: var(--ink-faint); letter-spacing: .06em;
+}
+
+/* ── Demo grid ── */
+.demoGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+@media (max-width: 860px)  { .demoGrid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; } }
+
+/* ── Demo card ── */
+.demoCard {
+  background: var(--bg-soft); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex; flex-direction: column;
+}
+.demoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 56px -24px rgba(20,30,26,.22);
+}
+
+/* ── Image ── */
+.demoImgWrap {
+  width: 100%; aspect-ratio: 16/9;
+  background: var(--bg-soft);
+  overflow: hidden; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.demoImgWrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  display: block; transition: transform .4s ease;
+  position: absolute; inset: 0;
+}
+.demoCard:hover .demoImgWrap img { transform: scale(1.04); }
+.demoPlaceholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.demoPlaceholder svg { width: 44px; height: 44px; stroke: var(--ink-faint); opacity: .35; }
+
+/* ── Content ── */
+.demoContent {
+  padding: 20px 24px 26px; display: flex; flex-direction: column; flex: 1;
+}
+.demoBadge {
+  display: inline-block; margin-bottom: 10px;
+  font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  color: var(--green); background: rgba(14,107,79,.1);
+  padding: 4px 11px; border-radius: 100px;
+}
+[data-theme="dark"] .demoBadge { background: rgba(63,207,142,.12); }
+.demoTitle {
+  font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 700;
+  color: var(--ink); line-height: 1.3; margin-bottom: 8px;
+}
+.demoDesc {
+  font-size: 14px; color: var(--ink-soft); line-height: 1.55;
+  margin: 0 0 20px; flex: 1;
+}
+
+/* ── Button ── */
+.demoBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  border: 1.5px solid; text-decoration: none;
+  transition: all .22s ease; width: fit-content;
+}
+.demoBtnActive {
+  background: var(--green); color: #fff; border-color: var(--green);
+  box-shadow: 0 8px 20px -6px rgba(14,107,79,.45);
+}
+.demoBtnActive:hover {
+  background: var(--green-2); border-color: var(--green-2);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px -8px rgba(14,107,79,.5);
+}
+.demoBtnActive svg { width: 16px; height: 16px; stroke: #fff; flex: none; }
+.demoBtnDisabled {
+  background: transparent; color: var(--ink-faint);
+  border-color: var(--line); cursor: default;
+}

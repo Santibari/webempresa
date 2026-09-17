@@ -1,0 +1,14 @@
+﻿.footer { padding: 56px 0 40px; border-top: 1px solid var(--line); }
+.footerTop { display: flex; justify-content: space-between; gap: 48px; flex-wrap: wrap; padding-bottom: 48px; }
+.footerBrand p { color: var(--ink-faint); font-size: 14px; max-width: 260px; line-height: 1.6; }
+.logo { display: flex; align-items: center; gap: 2px; font-family: 'Manrope',sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; margin-bottom: 14px; }
+.nova { color: var(--green); }
+.footerCols { display: flex; gap: 64px; flex-wrap: wrap; }
+.footerCol h4 { font-size: 13px; font-weight: 600; color: var(--ink-faint); margin-bottom: 16px; }
+.footerCol a { display: block; font-size: 14.5px; color: var(--ink-soft); margin-bottom: 12px; }
+.footerCol a:hover { color: var(--ink); }
+.footerBottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 28px; border-top: 1px solid var(--line);
+  font-size: 13px; color: var(--ink-faint); flex-wrap: wrap; gap: 12px;
+}
