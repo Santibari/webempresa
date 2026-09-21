@@ -1,40 +1,58 @@
 .formSection { background: var(--bg-soft); }
 .formGrid { display: grid; grid-template-columns: 0.85fr 1fr; gap: 64px; align-items: start; }
 @media (max-width: 900px) { .formGrid { grid-template-columns: 1fr; gap: 40px; } }
-.sideList { margin-top: 28px; display: flex; flex-direction: column; gap: 18px; }
-.sideItem { display: flex; gap: 14px; align-items: flex-start; }
+
+.sideList { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
+.sideItem { display: flex; gap: 16px; align-items: flex-start; }
 .sideIcon {
-  width: 34px; height: 34px; border-radius: 10px; flex: none;
+  width: 36px; height: 36px; border-radius: 11px; flex: none;
   background: var(--bg); border: 1px solid var(--line);
   display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease-spring);
 }
-.sideIcon svg { width: 16px; height: 16px; stroke: var(--green); }
-.sideText { font-size: 14.5px; color: var(--ink-soft); }
+.sideItem:hover .sideIcon { transform: scale(1.05); }
+.sideIcon svg { width: 17px; height: 17px; stroke: var(--green); }
+.sideText { font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; }
 .sideText strong { color: var(--ink); font-weight: 600; }
 
 .consultForm {
   background: var(--bg); border: 1px solid var(--line);
-  border-radius: var(--radius-lg); padding: 40px;
-  box-shadow: 0 12px 32px -16px rgba(0,0,0,0.06);
+  border-radius: var(--radius-lg); padding: 42px;
+  box-shadow: var(--shadow-card);
 }
 @media (max-width: 480px) { .consultForm { padding: 28px 22px; } }
+
 .formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
 @media (max-width: 520px) { .formRow { grid-template-columns: 1fr; } }
-.field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
 .field label { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+
 .field input, .field select, .field textarea {
   border: 1.5px solid var(--line); border-radius: var(--radius-sm);
   padding: 13px 16px; font-family: 'Inter', sans-serif;
   font-size: 14.5px; color: var(--ink); background: var(--bg-soft);
-  transition: border-color .2s ease, background .2s ease;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+  transition: border-color 0.25s var(--ease-spring), background 0.2s ease, box-shadow 0.25s var(--ease-spring);
 }
+
+/* Apple Focus Ring */
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; border-color: var(--green); background: var(--bg);
+  box-shadow: 0 0 0 3.5px rgba(14, 107, 79, 0.18);
 }
+[data-theme="dark"] .field input:focus,
+[data-theme="dark"] .field select:focus,
+[data-theme="dark"] .field textarea:focus {
+  border-color: var(--green-light);
+  box-shadow: 0 0 0 3.5px rgba(63, 207, 142, 0.22);
+}
+
 .field input:disabled, .field select:disabled, .field textarea:disabled {
   opacity: 0.65; cursor: not-allowed;
 }
-.field textarea { resize: vertical; min-height: 96px; }
+.field textarea { resize: vertical; min-height: 100px; }
 
 .spinner {
   width: 16px; height: 16px;
@@ -44,10 +62,7 @@
   animation: spin 0.8s linear infinite;
   display: inline-block;
 }
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .formSuccess {
   display: flex; align-items: center; gap: 12px;
@@ -73,4 +88,4 @@
 }
 .formError svg { width: 20px; height: 20px; stroke: currentColor; flex: none; }
 
-.formNote { font-size: 12.5px; color: var(--ink-faint); margin-top: 14px; text-align: center; }
+.formNote { font-size: 12.5px; color: var(--ink-faint); margin-top: 16px; text-align: center; }

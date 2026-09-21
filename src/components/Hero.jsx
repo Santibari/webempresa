@@ -18,7 +18,7 @@ export default function Hero() {
           <p className={styles.sub}>{t('hero.sub')}</p>
           <div className={styles.ctaRow}>
             <a href="#contacto" className="btn btn-primary">{t('hero.cta')}</a>
-            <a href="#servicios" className={styles.linkSecondary}>{t('hero.ctaSec')}</a>
+            <a href="#servicios" className="btn btn-tinted">{t('hero.ctaSec')}</a>
           </div>
           <div className={styles.heroProof}>
             <div>

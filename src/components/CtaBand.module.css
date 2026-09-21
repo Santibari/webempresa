@@ -1,20 +1,22 @@
-﻿.ctaBand { padding-top: 0; padding-bottom: 100px; }
+.ctaBand { padding-top: 0; padding-bottom: 100px; }
 .ctaBox {
-  background: linear-gradient(155deg, var(--green-dark), #06392a 70%);
-  border-radius: 36px; padding: 80px 64px; color: #fff;
+  background: linear-gradient(150deg, #094030 0%, #05291e 75%);
+  border-radius: 36px; padding: 84px 68px; color: #fff;
   position: relative; overflow: hidden;
   display: flex; align-items: center; justify-content: space-between; gap: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 32px 68px -20px rgba(10, 68, 51, 0.35);
 }
 .ctaBox::before {
-  content: ''; position: absolute; width: 520px; height: 520px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(63,207,142,0.28), transparent 70%);
-  top: -220px; right: -140px;
+  content: ''; position: absolute; width: 540px; height: 540px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(63, 207, 142, 0.25), transparent 70%);
+  top: -200px; right: -120px; pointer-events: none;
 }
-.ctaBoxText { position: relative; z-index: 1; max-width: 520px; }
-.ctaBoxText h2 { color: #fff; font-size: clamp(26px,3vw,36px); line-height: 1.2; }
-.ctaBoxText p { color: rgba(255,255,255,0.72); margin-top: 16px; font-size: 16px; max-width: 440px; }
+.ctaBoxText { position: relative; z-index: 1; max-width: 530px; }
+.ctaBoxText h2 { color: #fff; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.18; letter-spacing: -0.025em; }
+.ctaBoxText p { color: rgba(255, 255, 255, 0.76); margin-top: 18px; font-size: 16.5px; max-width: 450px; line-height: 1.6; }
 .ctaBoxActions { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
-.note { font-size: 13px; color: rgba(255,255,255,0.6); }
+.note { font-size: 13px; color: rgba(255, 255, 255, 0.62); letter-spacing: 0.01em; }
 @media (max-width: 760px) {
   .ctaBox { flex-direction: column; align-items: flex-start; padding: 52px 32px; border-radius: 28px; }
   .ctaBoxActions { align-items: flex-start; }
