@@ -103,7 +103,7 @@ export default {
   'form.ph.name':         'Ej. María Gómez',
   'form.ph.business':     'Ej. Distribuidora Central',
   'form.ph.email':        'contacto@empresa.com',
-  'form.ph.phone':        '300 000 0000',
+  'form.ph.phone':        '305 370 4481',
   'form.ph.message':      'Ej. Necesitamos conectar nuestra base de datos con un panel administrativo...',
   'form.submit':          'Solicitar sesión técnica gratuita',
   'form.sending':         'Enviando...',
