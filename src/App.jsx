@@ -4,6 +4,7 @@ import Header        from './components/Header.jsx'
 import Hero          from './components/Hero.jsx'
 import Services      from './components/Services.jsx'
 import Process       from './components/Process.jsx'
+import WhyAikata      from './components/WhyAikata.jsx'
 import Founders      from './components/Founders.jsx'
 import Demos         from './components/Demos.jsx'
 import ConsultForm   from './components/ConsultForm.jsx'
@@ -21,6 +22,7 @@ export default function App() {
           <Hero />
           <Services />
           <Process />
+          <WhyAikata />
           <Founders />
           <Demos />
           <ConsultForm />

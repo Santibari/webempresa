@@ -1,91 +1,237 @@
-.formSection { background: var(--bg-soft); }
-.formGrid { display: grid; grid-template-columns: 0.85fr 1fr; gap: 64px; align-items: start; }
-@media (max-width: 900px) { .formGrid { grid-template-columns: 1fr; gap: 40px; } }
-
-.sideList { margin-top: 32px; display: flex; flex-direction: column; gap: 20px; }
-.sideItem { display: flex; gap: 16px; align-items: flex-start; }
-.sideIcon {
-  width: 36px; height: 36px; border-radius: 11px; flex: none;
-  background: var(--bg); border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.25s var(--ease-spring);
+.formSection {
+  background: var(--bg);
+  position: relative;
 }
-.sideItem:hover .sideIcon { transform: scale(1.05); }
-.sideIcon svg { width: 17px; height: 17px; stroke: var(--green); }
-.sideText { font-size: 14.5px; color: var(--ink-soft); line-height: 1.55; }
-.sideText strong { color: var(--ink); font-weight: 600; }
 
+.formGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.sideInfo {
+  position: relative;
+}
+
+.sideList {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sideItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sideMonoTag {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.sideText {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.52;
+}
+.sideText strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ── Formulario Técnico (Concentric: 18px container -> 8px inputs) ── */
 .consultForm {
-  background: var(--bg); border: 1px solid var(--line);
-  border-radius: var(--radius-lg); padding: 42px;
+  background: var(--bg-surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 36px 32px;
   box-shadow: var(--shadow-card);
 }
-@media (max-width: 480px) { .consultForm { padding: 28px 22px; } }
-
-.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-@media (max-width: 520px) { .formRow { grid-template-columns: 1fr; } }
-
-.field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
-.field label { font-size: 13.5px; font-weight: 600; color: var(--ink); }
-
-.field input, .field select, .field textarea {
-  border: 1.5px solid var(--line); border-radius: var(--radius-sm);
-  padding: 13px 16px; font-family: 'Inter', sans-serif;
-  font-size: 14.5px; color: var(--ink); background: var(--bg-soft);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
-  transition: border-color 0.25s var(--ease-spring), background 0.2s ease, box-shadow 0.25s var(--ease-spring);
+@media (max-width: 480px) {
+  .consultForm {
+    padding: 24px 18px;
+  }
 }
 
-/* Apple Focus Ring */
-.field input:focus, .field select:focus, .field textarea:focus {
-  outline: none; border-color: var(--green); background: var(--bg);
-  box-shadow: 0 0 0 3.5px rgba(14, 107, 79, 0.18);
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
 }
-[data-theme="dark"] .field input:focus,
-[data-theme="dark"] .field select:focus,
-[data-theme="dark"] .field textarea:focus {
-  border-color: var(--green-light);
-  box-shadow: 0 0 0 3.5px rgba(63, 207, 142, 0.22);
+@media (max-width: 540px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    margin-bottom: 0;
+  }
 }
 
-.field input:disabled, .field select:disabled, .field textarea:disabled {
-  opacity: 0.65; cursor: not-allowed;
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
 }
-.field textarea { resize: vertical; min-height: 100px; }
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--bg);
+  box-shadow: inset 0 1px 2px rgba(25, 20, 18, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px var(--green-pale);
+}
+
+.field input:disabled,
+.field select:disabled,
+.field textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ── Selector Táctil de Chips/Pills ── */
+.pillsLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.pillsGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pillBtn {
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: 9999px;
+  padding: 8px 14px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  text-align: left;
+}
+
+.pillBtn:hover:not(:disabled) {
+  border-color: var(--green);
+  color: var(--ink);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.12);
+}
+
+.pillBtnActive {
+  background: var(--green-pale);
+  border-color: var(--green);
+  color: var(--green);
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.3), 0 2px 8px rgba(16, 185, 129, 0.15);
+  transform: translateY(-1px);
+}
+
+.pillBtnActive:hover:not(:disabled) {
+  background: var(--green-pale);
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.pillBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pillIndicator {
+  font-size: 11px;
+  color: inherit;
+  flex: none;
+}
 
 .spinner {
-  width: 16px; height: 16px;
-  border: 2px solid rgba(255,255,255,0.3);
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-top-color: #fff;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
   display: inline-block;
+  margin-right: 6px;
 }
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 
-.formSuccess {
-  display: flex; align-items: center; gap: 12px;
-  background: rgba(14,107,79,0.08); border: 1px solid rgba(14,107,79,0.25);
-  color: var(--green); border-radius: var(--radius-sm);
-  padding: 16px 18px; font-size: 14px; font-weight: 600; margin-top: 16px;
+.errorMsg {
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  color: #dc2626;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
 }
-[data-theme="dark"] .formSuccess {
-  background: rgba(63,207,142,0.12); border-color: rgba(63,207,142,0.3);
-  color: var(--green-light);
-}
-.formSuccess svg { width: 20px; height: 20px; stroke: currentColor; flex: none; }
 
-.formError {
-  display: flex; align-items: center; gap: 12px;
-  background: rgba(220,38,38,0.08); border: 1px solid rgba(220,38,38,0.25);
-  color: #dc2626; border-radius: var(--radius-sm);
-  padding: 16px 18px; font-size: 14px; font-weight: 600; margin-top: 16px;
+.successMsg {
+  background: var(--green-pale);
+  border: 1px solid rgba(27, 67, 50, 0.25);
+  color: var(--green);
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
-[data-theme="dark"] .formError {
-  background: rgba(239,68,68,0.15); border-color: rgba(239,68,68,0.35);
-  color: #fca5a5;
-}
-.formError svg { width: 20px; height: 20px; stroke: currentColor; flex: none; }
 
-.formNote { font-size: 12.5px; color: var(--ink-faint); margin-top: 16px; text-align: center; }
+.formNote {
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-top: 14px;
+  text-align: center;
+}

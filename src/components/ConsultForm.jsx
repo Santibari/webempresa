@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useLang } from '../context/LangContext.jsx'
+import { useScrollReveal } from '../hooks/useScrollReveal.js'
 import styles from './ConsultForm.module.css'
 
 export default function ConsultForm() {
   const { t } = useLang()
+  const sectionRef = useScrollReveal({ threshold: 0.1 })
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -15,6 +17,14 @@ export default function ConsultForm() {
     interes: '',
     mensaje: ''
   })
+
+  const interestOptions = [
+    { value: 'web-movil', labelKey: 'form.opt.web' },
+    { value: 'ecommerce', labelKey: 'form.opt.ecom' },
+    { value: 'ia', labelKey: 'form.opt.ai' },
+    { value: 'consultoria', labelKey: 'form.opt.consult' },
+    { value: 'no-seguro', labelKey: 'form.opt.unsure' },
+  ]
 
   const onChange = e => {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
@@ -49,21 +59,22 @@ export default function ConsultForm() {
   }
 
   return (
-    <section className={styles.formSection} id="formulario">
+    <section className={styles.formSection} id="formulario" ref={sectionRef}>
       <div className="wrap">
         <div className={styles.formGrid}>
-          <div>
+          
+          {/* Lateral Izquierdo: Diagnóstico y Garantías */}
+          <div className={`${styles.sideInfo} reveal`}>
             <span className="kicker">{t('form.kicker')}</span>
-            <h2>{t('form.title')}</h2>
+            <h2>
+              {t('form.title')}
+              <span className="accentDot">.</span>
+            </h2>
             <p className="desc">{t('form.desc')}</p>
+
             <div className={styles.sideList}>
               <div className={styles.sideItem}>
-                <div className={styles.sideIcon}>
-                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="9"/>
-                    <path d="M12 7v5l3 2"/>
-                  </svg>
-                </div>
+                <span className={styles.sideMonoTag}>// 01 · sla</span>
                 <div className={styles.sideText}>
                   <strong>{t('form.side1.strong')}</strong>
                   {t('form.side1.text')}
@@ -71,12 +82,7 @@ export default function ConsultForm() {
               </div>
 
               <div className={styles.sideItem}>
-                <div className={styles.sideIcon}>
-                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M9 12l2 2 4-4"/>
-                    <circle cx="12" cy="12" r="9"/>
-                  </svg>
-                </div>
+                <span className={styles.sideMonoTag}>// 02 · alcance</span>
                 <div className={styles.sideText}>
                   <strong>{t('form.side2.strong')}</strong>
                   {t('form.side2.text')}
@@ -84,12 +90,7 @@ export default function ConsultForm() {
               </div>
 
               <div className={styles.sideItem}>
-                <div className={styles.sideIcon}>
-                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="4" y="4" width="16" height="16" rx="4"/>
-                    <path d="M8 12h8"/>
-                  </svg>
-                </div>
+                <span className={styles.sideMonoTag}>// 03 · nda</span>
                 <div className={styles.sideText}>
                   <strong>{t('form.side3.strong')}</strong>
                   {t('form.side3.text')}
@@ -98,7 +99,8 @@ export default function ConsultForm() {
             </div>
           </div>
 
-          <form className={styles.consultForm} onSubmit={onSubmit}>
+          {/* Formulario Técnico */}
+          <form className={`${styles.consultForm} reveal stagger-1`} onSubmit={onSubmit}>
             <div className={styles.formRow}>
               <div className={styles.field}>
                 <label htmlFor="nombre">{t('form.label.name')}</label>
@@ -110,7 +112,7 @@ export default function ConsultForm() {
                   required
                   value={form.nombre}
                   onChange={onChange}
-                  disabled={loading}
+                  disabled={loading || sent}
                 />
               </div>
               <div className={styles.field}>
@@ -120,10 +122,9 @@ export default function ConsultForm() {
                   id="empresa"
                   name="empresa"
                   placeholder={t('form.ph.business')}
-                  required
                   value={form.empresa}
                   onChange={onChange}
-                  disabled={loading}
+                  disabled={loading || sent}
                 />
               </div>
             </div>
@@ -139,7 +140,7 @@ export default function ConsultForm() {
                   required
                   value={form.email}
                   onChange={onChange}
-                  disabled={loading}
+                  disabled={loading || sent}
                 />
               </div>
               <div className={styles.field}>
@@ -149,31 +150,38 @@ export default function ConsultForm() {
                   id="telefono"
                   name="telefono"
                   placeholder={t('form.ph.phone')}
-                  required
                   value={form.telefono}
                   onChange={onChange}
-                  disabled={loading}
+                  disabled={loading || sent}
                 />
               </div>
             </div>
 
+            {/* Selector Táctil de Área Técnica (Pills) */}
             <div className={styles.field}>
-              <label htmlFor="interes">{t('form.label.interest')}</label>
-              <select
-                id="interes"
-                name="interes"
-                required
-                value={form.interes}
-                onChange={onChange}
-                disabled={loading}
-              >
-                <option value="" disabled>{t('form.opt.default')}</option>
-                <option value="web-movil">{t('form.opt.web')}</option>
-                <option value="ecommerce">{t('form.opt.ecom')}</option>
-                <option value="ia">{t('form.opt.ai')}</option>
-                <option value="consultoria">{t('form.opt.consult')}</option>
-                <option value="no-seguro">{t('form.opt.unsure')}</option>
-              </select>
+              <label className={styles.pillsLabel}>{t('form.label.interest')}</label>
+              <div className={styles.pillsGroup} role="radiogroup" aria-label={t('form.label.interest')}>
+                {interestOptions.map((opt) => {
+                  const active = form.interes === opt.value
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      role="radio"
+                      aria-checked={active}
+                      className={`${styles.pillBtn} ${active ? styles.pillBtnActive : ''}`}
+                      onClick={() => {
+                        setForm(f => ({ ...f, interes: opt.value }))
+                        if (error) setError('')
+                      }}
+                      disabled={loading || sent}
+                    >
+                      <span className={styles.pillIndicator}>{active ? '●' : '○'}</span>
+                      <span>{t(opt.labelKey)}</span>
+                    </button>
+                  )
+                })}
+              </div>
             </div>
 
             <div className={styles.field}>
@@ -184,49 +192,32 @@ export default function ConsultForm() {
                 placeholder={t('form.ph.message')}
                 value={form.mensaje}
                 onChange={onChange}
-                disabled={loading}
-              ></textarea>
+                disabled={loading || sent}
+              />
             </div>
+
+            {error && <div className={styles.errorMsg}>{error}</div>}
+            {sent && <div className={styles.successMsg}>{t('form.success')}</div>}
 
             <button
               type="submit"
               className="btn btn-primary"
-              style={{ width: '100%', justifyContent: 'center' }}
-              disabled={loading}
+              disabled={loading || sent}
+              style={{ width: '100%', marginTop: '8px' }}
             >
               {loading ? (
                 <>
-                  <span className={styles.spinner} aria-hidden="true" />
-                  {t('form.sending')}
+                  <span className={styles.spinner} />
+                  <span>{t('form.sending')}</span>
                 </>
               ) : (
-                t('form.submit')
+                <span>{sent ? '✓ Solicitud recibida' : t('form.submit')}</span>
               )}
             </button>
 
-            {sent && (
-              <div className={styles.formSuccess} role="alert">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="9"/>
-                  <path d="M8 12l2.5 2.5L16 9"/>
-                </svg>
-                <span>{t('form.success')}</span>
-              </div>
-            )}
-
-            {error && (
-              <div className={styles.formError} role="alert">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="9"/>
-                  <line x1="12" y1="8" x2="12" y2="12"/>
-                  <line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-                <span>{error}</span>
-              </div>
-            )}
-
             <p className={styles.formNote}>{t('form.note')}</p>
           </form>
+
         </div>
       </div>
     </section>

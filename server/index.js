@@ -13,7 +13,7 @@ app.use(express.json())
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', service: 'LuckNova API', timestamp: new Date().toISOString() })
+  res.json({ status: 'ok', service: 'Aikata API', timestamp: new Date().toISOString() })
 })
 
 // Contact / Demo request endpoint
@@ -48,6 +48,6 @@ app.post('/api/contact', async (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`\n🚀 Servidor LuckNova Backend escuchando en http://localhost:${PORT}`)
+  console.log(`\n🚀 Servidor Aikata Backend escuchando en http://localhost:${PORT}`)
   console.log(`📬 Correo configurado para notificaciones: ${process.env.EMAIL_TO || process.env.GMAIL_USER}`)
 })

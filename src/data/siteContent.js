@@ -4,7 +4,7 @@
 // ═══════════════════════════════════════════════════════════
 
 // ── LOGO ──────────────────────────────────────────────────
-// Deja vacío ('') para usar el logo de texto "LuckNova"
+// Deja vacío ('') para usar el logo de texto "Aikata"
 // Ejemplo: '/src/assets/images/logo.svg'
 export const LOGO_SRC = ''
 
@@ -32,33 +32,19 @@ export const LOGOS = [
   { id: 6, label: 'Aliado 2',  src: '' },
 ]
 
+import holyFamilyImg from '../assets/images/demos/holyfamily.png'
+
 // ── DEMOS DE PROYECTOS ────────────────────────────────────
-// img:  ruta de imagen, ej. '/src/assets/images/demos/demo1.jpg'
-// link: URL externa de la demo, ej. 'https://demo.cliente.com'
-// Deja link: '' para mostrar el botón "Próximamente"
+// img:  ruta o import de imagen
+// link: URL externa del proyecto en producción
 export const DEMOS = [
   {
     id: 1,
-    badge: 'E-commerce',
-    title: 'Proyecto 1',
-    desc:  'Descripción corta del proyecto',
-    img:   '',
-    link:  '',
-  },
-  {
-    id: 2,
-    badge: 'App Móvil',
-    title: 'Proyecto 2',
-    desc:  'Descripción corta del proyecto',
-    img:   '',
-    link:  '',
-  },
-  {
-    id: 3,
-    badge: 'Dashboard',
-    title: 'Proyecto 3',
-    desc:  'Descripción corta del proyecto',
-    img:   '',
-    link:  '',
+    badge: 'Web & Plataforma Educativa',
+    title: 'Holy Family Preschool',
+    desc: 'Sitio web oficial y plataforma digital desarrollada para Holy Family Preschool. Arquitectura moderna, diseño de alta fidelidad, interactividad y optimización de rendimiento.',
+    img: holyFamilyImg,
+    link: 'https://www.holyfamily.com.co/',
+    status: 'Entregado y activo',
   },
 ]

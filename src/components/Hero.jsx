@@ -1,92 +1,130 @@
 import { useLang } from '../context/LangContext.jsx'
+import { useScrollReveal } from '../hooks/useScrollReveal.js'
 import styles from './Hero.module.css'
 
 export default function Hero() {
   const { t } = useLang()
+  const heroRef = useScrollReveal({ threshold: 0.05 })
+
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} ref={heroRef}>
       <div className={`wrap ${styles.heroGrid}`}>
-        <div>
-          <span className="eyebrow-tag">
+        
+        {/* Columna Izquierda (60%): Manifiesto y Acción */}
+        <div className={`${styles.heroCopy} reveal`}>
+          <div className="eyebrow-tag">
             <span className="eyebrow-dot"></span>
-            {t('hero.eyebrow')}
-          </span>
-          <h1>
+            <span>{t('hero.eyebrow')}</span>
+          </div>
+
+          <h1 className={styles.heroTitle}>
             {t('hero.title')}{' '}
             <span className={styles.accent}>{t('hero.accent')}</span>
+            <span className="accentDot">.</span>
           </h1>
-          <p className={styles.sub}>{t('hero.sub')}</p>
+
+          <p className={styles.heroSub}>{t('hero.sub')}</p>
+
           <div className={styles.ctaRow}>
-            <a href="#contacto" className="btn btn-primary">{t('hero.cta')}</a>
-            <a href="#servicios" className="btn btn-tinted">{t('hero.ctaSec')}</a>
+            <a href="#contacto" className="btn btn-primary">
+              {t('hero.cta')}
+            </a>
+            <a href="#servicios" className="btn-mono">
+              <span>{t('hero.ctaSec')}</span>
+              <span className="arrow" aria-hidden="true">→</span>
+            </a>
           </div>
+
           <div className={styles.heroProof}>
-            <div>
+            <div className={styles.proofItem}>
+              <div className={styles.proofIndex}>// 01</div>
               <div className={styles.proofNum}>+1</div>
               <div className={styles.proofLabel}>{t('hero.proof1')}</div>
             </div>
-            <div>
-              <div className={styles.proofNum}>3</div>
+            <div className={styles.proofItem}>
+              <div className={styles.proofIndex}>// 02</div>
+              <div className={styles.proofNum}>3 sem</div>
               <div className={styles.proofLabel}>{t('hero.proof2')}</div>
             </div>
-            <div>
+            <div className={styles.proofItem}>
+              <div className={styles.proofIndex}>// 03</div>
               <div className={styles.proofNum}>100%</div>
               <div className={styles.proofLabel}>{t('hero.proof3')}</div>
             </div>
           </div>
         </div>
 
-        <div className={styles.deviceStage}>
-          <div className={styles.laptop}>
-            <div className={styles.laptopScreen}>
-              <div className={styles.screenTopbar}>
-                <div className={styles.dot}></div>
-                <div className={styles.dot}></div>
-                <div className={styles.dot}></div>
+        {/* Columna Derecha (40%): Ficha Arquitectónica con Sangrado Inferior */}
+        <div className={`${styles.specStage} reveal stagger-2`}>
+          <div className={styles.specCard}>
+            
+            {/* Cabecera del archivo de configuración / manifiesto */}
+            <div className={styles.specHeader}>
+              <div className={styles.specDots}>
+                <span className={styles.specDot}></span>
+                <span className={styles.specDot}></span>
+                <span className={styles.specDot}></span>
               </div>
-              <div className={styles.uiCard}>
-                <div className={styles.uiRow}>
-                  <div>
-                    <span className={styles.uiPill}>Ventas del mes</span>
-                    <div className={styles.uiChart}>
-                      <svg viewBox="0 0 200 64" preserveAspectRatio="none">
-                        <polyline
-                          points="0,50 30,42 60,46 90,28 120,32 150,14 180,20 200,8"
-                          fill="none" stroke="#0e6b4f" strokeWidth="3"
-                          strokeLinecap="round" strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div>
-                    <div className={styles.uiBar} style={{marginBottom:'8px'}}></div>
-                    <div className={`${styles.uiBar} ${styles.short}`} style={{marginBottom:'8px'}}></div>
-                    <div className={styles.uiBar}></div>
-                  </div>
-                </div>
-                <div className={styles.uiRowDouble}>
-                  <div className={styles.uiBarBlock}></div>
-                  <div className={`${styles.uiBarBlock} ${styles.uiBarGreen}`}></div>
-                </div>
+              <span className={styles.specFileName}>aikata.manifest.ts</span>
+              <span className={styles.specLiveBadge}>
+                <span className={styles.livePulse}></span>
+                operativo
+              </span>
+            </div>
+
+            {/* Bloque de código / arquitectura técnica */}
+            <div className={styles.specBody}>
+              <div className={styles.codeRow}>
+                <span className={styles.lineNum}>01</span>
+                <span className={styles.codeKeyword}>interface</span>{' '}
+                <span className={styles.codeType}>OperationalStack</span> {'{'}
+              </div>
+              <div className={styles.codeRow}>
+                <span className={styles.lineNum}>02</span>
+                <span className={styles.codeIndent}>client:</span>{' '}
+                <span className={styles.codeStr}>'Pyme & Enterprise'</span>;
+              </div>
+              <div className={styles.codeRow}>
+                <span className={styles.lineNum}>03</span>
+                <span className={styles.codeIndent}>architecture:</span>{' '}
+                <span className={styles.codeStr}>'Modular Event-Driven'</span>;
+              </div>
+              <div className={styles.codeRow}>
+                <span className={styles.lineNum}>04</span>
+                <span className={styles.codeIndent}>deliveryCycle:</span>{' '}
+                <span className={styles.codeNum}>14</span>{' '}
+                <span className={styles.codeComment}>/* días primer release */</span>;
+              </div>
+              <div className={styles.codeRow}>
+                <span className={styles.lineNum}>05</span>
+                <span className={styles.codeIndent}>partnership:</span>{' '}
+                <span className={styles.codeType}>AikataCompanion</span>;
+              </div>
+              <div className={styles.codeRow}>
+                <span className={styles.lineNum}>06</span>
+                {'}'}
               </div>
             </div>
-          </div>
-          <div className={styles.phone}>
-            <div className={styles.phoneScreen}>
-              <div className={styles.phoneNotch}></div>
-              <div className={styles.phoneCard}>
-                <div className={styles.phoneAvatar}></div>
-                <div className={`${styles.phoneLine} ${styles.w60}`}></div>
-                <div className={`${styles.phoneLine} ${styles.w40}`}></div>
-                <div className={styles.phoneBtn}>Nuevo pedido</div>
+
+            {/* Telemetría y diagnóstico en vivo */}
+            <div className={styles.specTelemetry}>
+              <div className={styles.telemetryRow}>
+                <span className={styles.telemetryLabel}>pipeline_health</span>
+                <span className={styles.telemetryVal}>99.98% ok</span>
               </div>
-              <div className={styles.phoneCard} style={{marginTop:'12px'}}>
-                <div className={`${styles.phoneLine} ${styles.w40}`}></div>
-                <div className={`${styles.phoneLine} ${styles.w60}`}></div>
+              <div className={styles.telemetryRow}>
+                <span className={styles.telemetryLabel}>database_sync</span>
+                <span className={styles.telemetryVal}>0.12s latency</span>
+              </div>
+              <div className={styles.telemetryRow}>
+                <span className={styles.telemetryLabel}>engineering_mode</span>
+                <span className={styles.telemetryVal}>active_pair</span>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   )

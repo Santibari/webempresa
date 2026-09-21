@@ -8,7 +8,7 @@ export default function WhatsAppBubble() {
     <>
       <a
         className={styles.waBubble}
-        href="https://wa.me/573000000000?text=Hola%20LuckNova%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20servicios"
+        href="https://wa.me/573000000000?text=Hola%20Aikata%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20servicios"
         target="_blank"
         rel="noopener noreferrer"
         aria-label={t('wa.tooltip')}

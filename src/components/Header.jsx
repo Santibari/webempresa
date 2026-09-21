@@ -25,10 +25,10 @@ export default function Header() {
       <div className={`wrap ${styles.nav}`}>
 
         {/* Logo */}
-        <a href="#" className={styles.logo} aria-label="LuckNova — inicio">
+        <a href="#" className={styles.logo} aria-label="Aikata — inicio">
           {LOGO_SRC
-            ? <img src={LOGO_SRC} alt="LuckNova" className={styles.logoImg} />
-            : <><span>Luck</span><span className={styles.nova}>Nova</span></>
+            ? <img src={LOGO_SRC} alt="Aikata" className={styles.logoImg} />
+            : <><span>Ai</span><span className={styles.nova}>kata</span><span className={styles.kanjiTag}>相方</span></>
           }
         </a>
 
@@ -36,6 +36,7 @@ export default function Header() {
         <nav className={styles.navLinks} aria-label="Navegacion principal">
           <a href="#servicios">{t('nav.services')}</a>
           <a href="#proceso">{t('nav.how')}</a>
+          <a href="#por-que-aikata">{t('nav.why')}</a>
           <a href="#equipo">{t('nav.team')}</a>
           <a href="#demos">{t('nav.demos')}</a>
           <a href="#formulario">{t('nav.contact')}</a>

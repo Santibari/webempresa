@@ -1,0 +1,151 @@
+.whySection {
+  background: var(--bg);
+  position: relative;
+}
+
+.whyBento {
+  display: grid;
+  grid-template-columns: 1.5fr 0.95fr; /* 65/35 Asymmetric split */
+  gap: 28px;
+  align-items: stretch;
+}
+@media (max-width: 920px) {
+  .whyBento {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ── Concept Card Principal (65%) ── */
+.conceptCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 48px 44px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .conceptCard {
+    padding: 32px 24px;
+  }
+}
+
+.kanjiWatermark {
+  position: absolute;
+  right: 24px;
+  bottom: 16px;
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  font-size: clamp(100px, 16vw, 190px);
+  font-weight: 900;
+  color: var(--ink);
+  opacity: 0.04;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+  z-index: 0;
+}
+[data-theme="dark"] .kanjiWatermark {
+  opacity: 0.06;
+}
+
+.conceptContent {
+  position: relative;
+  z-index: 1;
+}
+
+.badgeWrap {
+  margin-bottom: 18px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--green);
+  background: var(--green-pale);
+  border: 1px solid rgba(27, 67, 50, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+.conceptTitle {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+
+.leadText {
+  font-size: clamp(15.5px, 1.25vw, 17.5px);
+  color: var(--ink);
+  line-height: 1.72;
+  font-weight: 450;
+  margin-bottom: 32px;
+}
+
+.quoteFooter {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.quoteSource {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--ink-faint);
+}
+
+/* ── Columna Lateral: 4 Pilares (35%) ── */
+.pillarsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pillarItem {
+  background: var(--bg-surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: border-color 0.2s ease, transform 0.2s var(--ease-spring), box-shadow 0.2s ease;
+}
+.pillarItem:hover {
+  border-color: var(--green);
+  transform: translateX(4px);
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), var(--shadow-sm);
+}
+
+.pillarIndex {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+  flex: none;
+  margin-top: 2px;
+}
+
+.pillarBody h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.pillarBody p {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.58;
+}

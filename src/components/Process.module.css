@@ -1,29 +1,158 @@
-.process { background: var(--bg-soft); }
-.stepsGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
-@media (max-width: 840px) { .stepsGrid { grid-template-columns: 1fr; gap: 40px; } }
-
-.step { padding: 0 24px 0 0; position: relative; }
-.connector {
-  position: absolute; top: 22px; left: 44px; right: -24px;
-  height: 1.5px; background: var(--line); z-index: 0;
-}
-@media (max-width: 840px) { .connector { display: none; } }
-
-.stepNum {
-  font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 15px; color: var(--green);
-  width: 46px; height: 46px; border: 1.5px solid var(--green); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--bg); position: relative; z-index: 1; margin-bottom: 26px;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-spring);
-}
-.step:hover .stepNum {
-  transform: scale(1.08);
-  box-shadow: 0 0 0 4px rgba(14, 107, 79, 0.12);
-}
-[data-theme="dark"] .step:hover .stepNum {
-  box-shadow: 0 0 0 4px rgba(63, 207, 142, 0.16);
+.processSection {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.step h3 { font-size: 20px; margin-bottom: 12px; }
-.step p { color: var(--ink-soft); font-size: 15px; max-width: 290px; line-height: 1.62; }
+.processLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rowTop {
+  display: grid;
+  grid-template-columns: 1.4fr 0.95fr; /* 60/40 Asymmetric split */
+  gap: 24px;
+}
+@media (max-width: 880px) {
+  .rowTop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.phaseCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 34px 30px;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.22s ease, transform 0.22s var(--ease-spring), box-shadow 0.22s ease;
+}
+.phaseCard:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), var(--shadow-card-hover);
+}
+
+.phaseHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.phaseIndex {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: 0.04em;
+}
+
+.phaseTag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.phaseCard h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.phaseCard p {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.62;
+  margin-bottom: 22px;
+}
+
+.phaseDeliverable {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  flex-wrap: wrap;
+}
+
+.deliverableLabel {
+  color: var(--ink-faint);
+}
+
+.deliverableVal {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ── Full Width Consolidation Phase ── */
+.phaseFull {
+  width: 100%;
+}
+
+.fullContent {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 880px) {
+  .fullContent {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.fullText h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.fullText p {
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.62;
+  margin-bottom: 0;
+}
+
+.telemetryStrip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: var(--font-mono);
+}
+@media (max-width: 620px) {
+  .telemetryStrip {
+    grid-template-columns: 1fr;
+  }
+}
+
+.telemetryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tLabel {
+  font-size: 10.5px;
+  color: var(--ink-faint);
+}
+
+.tValue {
+  font-size: 11.5px;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.35;
+}

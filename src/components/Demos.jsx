@@ -1,35 +1,39 @@
+import { useState, useRef, useEffect } from 'react'
 import { useLang } from '../context/LangContext.jsx'
 import { LOGOS, DEMOS } from '../data/siteContent.js'
+import { useScrollReveal } from '../hooks/useScrollReveal.js'
+import Skeleton from './Skeleton.jsx'
 import styles from './Demos.module.css'
-
-const PlaceholderIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="3" width="18" height="18" rx="3"/>
-    <circle cx="8.5" cy="8.5" r="1.5"/>
-    <path d="m21 15-5-5L5 21"/>
-  </svg>
-)
-
-const ArrowIcon = () => (
-  <svg viewBox="0 0 20 20" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 10h12M10 4l6 6-6 6"/>
-  </svg>
-)
 
 export default function Demos() {
   const { t } = useLang()
+  const demo = DEMOS[0] // Holy Family Preschool
+  const sectionRef = useScrollReveal({ threshold: 0.1 })
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const imgRef = useRef(null)
+
+  useEffect(() => {
+    if (imgRef.current && imgRef.current.complete) {
+      setImageLoaded(true)
+    }
+  }, [])
 
   return (
-    <section id="demos" className={styles.demosSection}>
+    <section id="demos" className={styles.demosSection} ref={sectionRef}>
       <div className="wrap">
-        <div className="section-head">
+        
+        {/* Encabezado Asimétrico */}
+        <div className="section-head reveal">
           <span className="kicker">{t('demos.kicker')}</span>
-          <h2>{t('demos.title')}</h2>
+          <h2>
+            {t('demos.title')}
+            <span className="accentDot">.</span>
+          </h2>
           <p className="desc">{t('demos.desc')}</p>
         </div>
 
-        {/* ── Logos strip ── */}
-        <div className={styles.logosStrip} aria-label={t('demos.clientsLabel')}>
+        {/* ── Tira de Aliados Técnicos ── */}
+        <div className={`${styles.logosStrip} reveal`} aria-label={t('demos.clientsLabel')}>
           <div className={styles.logosTrack}>
             {[...LOGOS, ...LOGOS].map((logo, i) => (
               <div
@@ -37,50 +41,134 @@ export default function Demos() {
                 className={styles.logoItem}
                 aria-hidden={i >= LOGOS.length ? 'true' : undefined}
               >
-                {logo.src
-                  ? <img src={logo.src} alt={logo.label} />
-                  : <div className={styles.logoPlaceholder}>{logo.label}</div>
-                }
+                {logo.src ? (
+                  <img src={logo.src} alt={logo.label} />
+                ) : (
+                  <div className={styles.logoPlaceholder}>// {logo.label}</div>
+                )}
               </div>
             ))}
           </div>
         </div>
 
-        {/* ── Demo grid ── */}
-        <div className={styles.demoGrid}>
-          {DEMOS.map(demo => (
-            <div key={demo.id} className={styles.demoCard}>
-              <div className={styles.demoImgWrap}>
-                {demo.img
-                  ? <img src={demo.img} alt={demo.title} />
-                  : <div className={styles.demoPlaceholder}><PlaceholderIcon /></div>
-                }
+        {/* ── Stage Spotlight del Proyecto Holy Family ── */}
+        <div className={`${styles.spotlightContainer} reveal stagger-1`}>
+          {/* Barra de Control / Browser Window Chrome */}
+          <div className={styles.spotlightTopBar}>
+            <div className={styles.browserDots}>
+              <span className={styles.dotRed}></span>
+              <span className={styles.dotYellow}></span>
+              <span className={styles.dotGreen}></span>
+              <span className={styles.browserUrl}>
+                <svg className={styles.lockIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                https://www.holyfamily.com.co
+              </span>
+            </div>
+
+            <div className={styles.statusBadge}>
+              <span className={styles.livePulse}></span>
+              <span>{t('demos.statusActive')}</span>
+            </div>
+          </div>
+
+          {/* Ventana de visualización interactiva */}
+          <div className={styles.spotlightGrid}>
+            
+            {/* Visual Izquierdo con Enlace Directo a Holy Family */}
+            <a
+              href={demo.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.visualLink}
+              title={t('demos.previewTooltip')}
+            >
+              <div className={styles.stageVisual}>
+                {!imageLoaded && (
+                  <Skeleton
+                    width="100%"
+                    height="100%"
+                    borderRadius="12px"
+                    style={{ position: 'absolute', top: 0, left: 0, zIndex: 1 }}
+                  />
+                )}
+                <img
+                  ref={imgRef}
+                  src={demo.img}
+                  alt={demo.title}
+                  className={styles.stageImg}
+                  loading="lazy"
+                  onLoad={() => setImageLoaded(true)}
+                  style={{
+                    opacity: imageLoaded ? 1 : 0,
+                    transition: 'opacity 0.4s ease'
+                  }}
+                />
+                <div className={styles.hoverOverlay}>
+                  <div className={styles.overlayPill}>
+                    <span>{t('demos.visitSite')}</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className={styles.arrowIcon}>
+                      <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                  </div>
+                  <span className={styles.overlayHint}>{t('demos.previewTooltip')}</span>
+                </div>
               </div>
-              <div className={styles.demoContent}>
-                <span className={styles.demoBadge}>{demo.badge}</span>
-                <div className={styles.demoTitle}>{demo.title}</div>
-                <p className={styles.demoDesc}>{demo.desc}</p>
-                {demo.link
-                  ? (
-                    <a
-                      href={demo.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`${styles.demoBtn} ${styles.demoBtnActive}`}
-                    >
-                      {t('demos.btn')} <ArrowIcon />
-                    </a>
-                  )
-                  : (
-                    <span className={`${styles.demoBtn} ${styles.demoBtnDisabled}`}>
-                      {t('demos.soon')}
-                    </span>
-                  )
-                }
+            </a>
+
+            {/* Especificación Técnica Derecha */}
+            <div className={styles.stageSpec}>
+              <div className={styles.specHeader}>
+                <span className={styles.demoBadge}>[{demo.badge}]</span>
+                <span className={styles.techTag}>prod // verified</span>
+              </div>
+
+              <h3 className={styles.demoTitle}>{demo.title}</h3>
+              <p className={styles.demoDesc}>{demo.desc}</p>
+
+              {/* Ficha técnica de estado y arquitectura */}
+              <div className={styles.metricList}>
+                <div className={styles.metricRow}>
+                  <span className={styles.metricLabel}>Estado operativo:</span>
+                  <span className={styles.metricValActive}>
+                    <span className={styles.statusDot}></span>
+                    {t('demos.statusActive')}
+                  </span>
+                </div>
+                <div className={styles.metricRow}>
+                  <span className={styles.metricLabel}>Despliegue:</span>
+                  <span className={styles.metricVal}>Producción continua</span>
+                </div>
+                <div className={styles.metricRow}>
+                  <span className={styles.metricLabel}>Arquitectura:</span>
+                  <span className={styles.metricVal}>Web Moderna / Responsive / SEO</span>
+                </div>
+              </div>
+
+              <div className={styles.stageActions}>
+                <a
+                  href={demo.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  <span>{t('demos.btn')}</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  href="#contacto"
+                  className="btn btn-tinted"
+                >
+                  {t('demos.similarCta')}
+                </a>
               </div>
             </div>
-          ))}
+
+          </div>
         </div>
+
       </div>
     </section>
   )

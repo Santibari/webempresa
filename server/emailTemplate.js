@@ -1,5 +1,5 @@
 /**
- * Genera el correo HTML y texto plano con diseño corporativo elegante para LuckNova.
+ * Genera el correo HTML y texto plano con diseño corporativo elegante para Aikata.
  */
 export function buildContactEmail({ nombre, empresa, email, telefono, interes, mensaje }) {
   const cleanPhone = (telefono || '').replace(/\D/g, '')
@@ -21,7 +21,7 @@ export function buildContactEmail({ nombre, empresa, email, telefono, interes, m
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nueva Solicitud — LuckNova</title>
+  <title>Nueva Solicitud — Aikata</title>
 </head>
 <body style="margin:0; padding:0; background-color:#f4f7f5; font-family:'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing:antialiased;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f7f5; padding:32px 16px;">
@@ -37,7 +37,7 @@ export function buildContactEmail({ nombre, empresa, email, telefono, interes, m
                 <tr>
                   <td>
                     <div style="font-size:24px; font-weight:800; letter-spacing:-0.02em; font-family:'Helvetica Neue', Arial, sans-serif;">
-                      Luck<span style="color:#3fcf8e;">Nova</span>
+                      Ai<span style="color:#3fcf8e;">kata</span> <span style="font-size:14px; color:#3fcf8e; font-weight:700;">相方</span>
                     </div>
                     <div style="margin-top:16px; display:inline-block; background:rgba(63,207,142,0.18); border:1px solid rgba(63,207,142,0.35); color:#a7f3d0; font-size:11px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:5px 12px; border-radius:100px;">
                       ✦ Nueva Solicitud de Consultoría
@@ -108,7 +108,7 @@ export function buildContactEmail({ nombre, empresa, email, telefono, interes, m
                     <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
                       <tr>
                         <td style="padding:0 6px;">
-                          <a href="mailto:${email}?subject=Respuesta%20LuckNova%20-%20Consultor%C3%ADa%20para%20${encodeURIComponent(empresa)}"
+                          <a href="mailto:${email}?subject=Respuesta%20Aikata%20-%20Consultor%C3%ADa%20para%20${encodeURIComponent(empresa)}"
                              style="display:inline-block; background:#0e6b4f; color:#ffffff; font-weight:700; font-size:14px; padding:14px 26px; text-decoration:none; border-radius:100px; box-shadow:0 8px 18px rgba(14,107,79,0.35);">
                             ✉ Responder por Correo
                           </a>
@@ -134,8 +134,8 @@ export function buildContactEmail({ nombre, empresa, email, telefono, interes, m
           <tr>
             <td style="background:#fafcfb; border-top:1px solid #e6ebe8; padding:24px 36px; text-align:center;">
               <p style="margin:0; font-size:12px; color:#8b9490; line-height:1.5;">
-                Notificación automática enviada a <strong style="color:#5c6663;">LuckNova</strong>.<br>
-                Bogotá, Colombia · <a href="https://lucknova.co" style="color:#0e6b4f; text-decoration:none;">lucknova.co</a>
+                Notificación automática enviada a <strong style="color:#5c6663;">Aikata</strong>.<br>
+                Bogotá, Colombia · <a href="https://aikata.co" style="color:#0e6b4f; text-decoration:none;">aikata.co</a>
               </p>
             </td>
           </tr>
@@ -149,8 +149,8 @@ export function buildContactEmail({ nombre, empresa, email, telefono, interes, m
 `
 
   const text = `
-LUCKNOVA - NUEVA SOLICITUD DE CONSULTORÍA
-=========================================
+AIKATA - NUEVA SOLICITUD DE CONSULTORÍA
+=======================================
 
 Fecha: ${now}
 
@@ -166,7 +166,7 @@ ${mensaje || '(Sin mensaje adicional)'}
 
 -----------------------------------------
 Responder a: ${email}
-LuckNova · Bogotá, Colombia
+Aikata · Bogotá, Colombia
 `
 
   return { html, text }

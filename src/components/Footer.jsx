@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="wrap">
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
-            <div className={styles.logo}><span>Luck</span><span className={styles.nova}>Nova</span></div>
+            <div className={styles.logo}><span>Ai</span><span className={styles.nova}>kata</span><span className={styles.kanjiTag}>相方</span></div>
             <p>{t('footer.tagline')}</p>
           </div>
           <div className={styles.footerCols}>
@@ -23,18 +23,19 @@ export default function Footer() {
             <div className={styles.footerCol}>
               <h4>{t('footer.company')}</h4>
               <a href="#proceso">{t('footer.how')}</a>
+              <a href="#por-que-aikata">{t('footer.why')}</a>
               <a href="#demos">{t('footer.demos')}</a>
               <a href="#formulario">{t('footer.contact')}</a>
             </div>
             <div className={styles.footerCol}>
               <h4>{t('footer.contact')}</h4>
-              <a href="mailto:hola@lucknova.co">hola@lucknova.co</a>
+              <a href="mailto:hola@aikata.co">hola@aikata.co</a>
               <a href="tel:+573000000000">+57 300 000 0000</a>
             </div>
           </div>
         </div>
         <div className={styles.footerBottom}>
-          <span>© 2026 LuckNova. {t('footer.copyright')}</span>
+          <span>© 2026 Aikata. {t('footer.copyright')}</span>
           <span>{t('footer.city')}</span>
         </div>
       </div>
