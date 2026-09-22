@@ -1,8 +1,10 @@
 import { createContext, useContext, useState } from 'react'
 import es from '../i18n/es.js'
 import en from '../i18n/en.js'
+import esV2 from '../i18n/es.v2.js'
+import enV2 from '../i18n/en.v2.js'
 
-const dicts = { es, en }
+const dicts = { es: { ...es, ...esV2 }, en: { ...en, ...enV2 } }
 
 const LangContext = createContext()
 

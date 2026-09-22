@@ -25,7 +25,7 @@ export default function Footer() {
               <a href="#proceso">{t('footer.how')}</a>
               <a href="#por-que-aikata">{t('footer.why')}</a>
               <a href="#demos">{t('footer.demos')}</a>
-              <a href="#formulario">{t('footer.contact')}</a>
+              <a href="#contacto">{t('footer.contact')}</a>
             </div>
             <div className={styles.footerCol}>
               <h4>{t('footer.contact')}</h4>

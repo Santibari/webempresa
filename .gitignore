@@ -51,3 +51,9 @@ coverage/
 # ── Archivos temporales ─────────────────────
 *.tmp
 *.temp
+
+# ── Documentación y capturas de rediseño ────
+docs/
+docs/redesign-v2/
+redesign-v2/
+redesing-v2/

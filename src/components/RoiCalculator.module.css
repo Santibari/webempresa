@@ -1,0 +1,98 @@
+.section {
+  background: var(--bg-tint);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+/* Cifra gigante de fondo con parallax */
+.bgNumber {
+  position: absolute;
+  right: -2vw;
+  top: 8%;
+  font-size: clamp(120px, 22vw, 360px);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  color: var(--ink);
+  opacity: 0.035;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+[data-theme="dark"] .bgNumber { opacity: 0.05; }
+
+.layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.85fr 1.25fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+@media (max-width: 960px) { .layout { grid-template-columns: 1fr; } }
+
+.copy { position: sticky; top: 120px; }
+@media (max-width: 960px) { .copy { position: static; } }
+.title { font-size: clamp(36px, 4.6vw, 68px); line-height: 0.98; letter-spacing: -0.045em; }
+.desc { margin-top: 24px; color: var(--ink-soft); font-size: 16px; line-height: 1.6; max-width: 460px; }
+
+.assump {
+  margin-top: 40px;
+  padding: 18px 20px;
+  border-left: 2px solid var(--line-strong);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.assump p { font-size: 13px; color: var(--ink-faint); line-height: 1.55; }
+
+/* Calculadora */
+.calc {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  border-radius: var(--radius-card);
+}
+@media (max-width: 760px) { .calc { grid-template-columns: 1fr; } }
+
+.inputs {
+  padding: clamp(24px, 3.5vw, 44px);
+  display: flex; flex-direction: column; gap: 30px;
+  border-right: 1px solid var(--line);
+}
+@media (max-width: 760px) { .inputs { border-right: 0; border-bottom: 1px solid var(--line); } }
+
+.slider { display: flex; flex-direction: column; gap: 12px; }
+.sliderHead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.sliderLabel { font-size: 14px; font-weight: 500; color: var(--ink-soft); }
+.sliderVal {
+  font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.sliderVal small { font-size: 11px; color: var(--ink-faint); font-weight: 500; }
+.sliderVal { white-space: nowrap; flex: none; }
+.sliderScale { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-faint); }
+
+.outputs {
+  padding: clamp(24px, 3.5vw, 44px);
+  background: var(--bg-elevated);
+  display: flex; flex-direction: column; gap: 24px;
+}
+.outMain { display: flex; flex-direction: column; gap: 6px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.outBig {
+  font-size: clamp(26px, 2.5vw, 40px);
+  white-space: nowrap;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+
+}
+.outSub { font-size: 12px; color: var(--ink-faint); }
+.outRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.outItem { display: flex; flex-direction: column; gap: 6px; }
+.outNum { font-size: 24px; font-weight: 700; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.outNum small { display: block; margin-top: 4px; font-size: 11px; font-family: var(--font-mono); color: var(--ink-faint); font-weight: 500; letter-spacing: 0; }
+
+.outCta { margin-top: auto; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; padding-top: 8px; }
+.note { font-size: 12px; color: var(--ink-faint); line-height: 1.5; }
