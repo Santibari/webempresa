@@ -1,5 +1,5 @@
 .processSection {
-  background: var(--bg-elevated);
+  background: var(--bg-tint);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }

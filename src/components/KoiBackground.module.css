@@ -1,0 +1,27 @@
+/* Capa fija detrás de todo. z-index negativo: pinta sobre el fondo del body
+   y debajo de cualquier sección. Nunca captura eventos. */
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 80% at 70% 20%, var(--koi-bg-hi) 0%, transparent 60%),
+    radial-gradient(90% 70% at 15% 90%, var(--koi-bg-lo) 0%, transparent 60%),
+    var(--koi-bg);
+}
+
+/* Profundidad de agua: viñeta muy sutil hacia los bordes */
+.root::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(85% 85% at 55% 50%, transparent 55%, var(--koi-vignette) 100%);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+}

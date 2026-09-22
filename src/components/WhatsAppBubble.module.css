@@ -51,3 +51,5 @@
   .waBubble svg { width: 24px; height: 24px; }
   .waTooltip { display: none; }
 }
+/* En móvil la barra CTA fija ya incluye WhatsApp */
+@media (max-width: 860px) { .waBubble, .waTooltip { display: none; } }

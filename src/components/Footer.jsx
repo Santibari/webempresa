@@ -25,12 +25,12 @@ export default function Footer() {
               <a href="#proceso">{t('footer.how')}</a>
               <a href="#por-que-aikata">{t('footer.why')}</a>
               <a href="#demos">{t('footer.demos')}</a>
-              <a href="#formulario">{t('footer.contact')}</a>
+              <a href="#contacto">{t('footer.contact')}</a>
             </div>
             <div className={styles.footerCol}>
               <h4>{t('footer.contact')}</h4>
-              <a href="mailto:hola@aikata.co">hola@aikata.co</a>
-              <a href="tel:+573000000000">+57 300 000 0000</a>
+              <a href="mailto:aikatasascolombia@gmail.com">aikatasascolombia@gmail.com</a>
+              <a href="https://wa.me/573053704481" target="_blank" rel="noopener noreferrer">+57 305 370 4481</a>
             </div>
           </div>
         </div>

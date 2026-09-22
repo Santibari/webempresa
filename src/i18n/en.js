@@ -103,7 +103,7 @@ export default {
   'form.ph.name':         'e.g. Maria Gomez',
   'form.ph.business':     'e.g. Logistics Corp',
   'form.ph.email':        'contact@company.com',
-  'form.ph.phone':        '+57 300 000 0000',
+  'form.ph.phone':        '+57 305 370 4481',
   'form.ph.message':      'e.g. We need to integrate our ERP database with a real-time web portal...',
   'form.submit':          'Request free technical session',
   'form.sending':         'Submitting...',
