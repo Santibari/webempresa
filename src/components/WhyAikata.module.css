@@ -90,7 +90,102 @@
   color: var(--ink);
   line-height: 1.72;
   font-weight: 450;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
+}
+
+/* ── Bloque Destacado de Filosofía (Human First, AI Assisted) ── */
+.philosophyCard {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--green);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.philosophyCard:hover {
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), var(--shadow-sm);
+}
+
+.philosophyHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.philosophyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--green);
+  background: var(--green-pale);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.philosophyDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.philosophyTag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+.philosophyTitle {
+  font-size: clamp(16.5px, 1.35vw, 19px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.philosophyDesc {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.62;
+  margin-bottom: 16px;
+}
+
+.philosophyMetrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.philMetric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.philVal {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: -0.02em;
+}
+
+.philLbl {
+  font-size: 11.5px;
+  color: var(--ink-faint);
+  line-height: 1.35;
 }
 
 .quoteFooter {

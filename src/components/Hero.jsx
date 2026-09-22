@@ -102,16 +102,17 @@ export default function Hero() {
                 <pre className={styles.code}>
                   <span className={styles.ln}>01</span><span className={styles.kw}>interface</span> <span className={styles.ty}>OperationalStack</span> {'{'}{'\n'}
                   <span className={styles.ln}>02</span>  client: <span className={styles.str}>'Pyme & Enterprise'</span>;{'\n'}
-                  <span className={styles.ln}>03</span>  architecture: <span className={styles.str}>'Modular · Event-driven'</span>;{'\n'}
-                  <span className={styles.ln}>04</span>  firstPilot: <span className={styles.num}>3</span> <span className={styles.cm}>// {t('hero.weeks')}</span>{'\n'}
-                  <span className={styles.ln}>05</span>  ownership: <span className={styles.num}>100</span>%;{'\n'}
-                  <span className={styles.ln}>06</span>  partnership: <span className={styles.ty}>AikataCompanion</span>;{'\n'}
-                  <span className={styles.ln}>07</span>{'}'}
+                  <span className={styles.ln}>03</span>  philosophy: <span className={styles.str}>'Human First · AI Assisted'</span>;{'\n'}
+                  <span className={styles.ln}>04</span>  focus: <span className={styles.str}>'Repetitive Process Automation'</span>;{'\n'}
+                  <span className={styles.ln}>05</span>  firstPilot: <span className={styles.num}>3</span> <span className={styles.cm}>// {t('hero.weeks')}</span>{'\n'}
+                  <span className={styles.ln}>06</span>  ownership: <span className={styles.num}>100</span>%;{'\n'}
+                  <span className={styles.ln}>07</span>  partnership: <span className={styles.ty}>AikataCompanion</span>;{'\n'}
+                  <span className={styles.ln}>08</span>{'}'}
                 </pre>
                 <div className={styles.telemetry}>
                   <div><span>pipeline_health</span><b>99.98% ok</b></div>
-                  <div><span>response_time</span><b>&lt; 24h</b></div>
-                  <div><span>engineering_mode</span><b>active_pair</b></div>
+                  <div><span>human_first</span><b>active_assist</b></div>
+                  <div><span>engineering</span><b>active_pair</b></div>
                 </div>
               </div>
             </Parallax>

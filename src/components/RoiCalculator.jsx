@@ -98,6 +98,11 @@ export default function RoiCalculator() {
               <span className="tag-mono">{t('roi.assump')}</span>
               <p>{t('roi.assump.text')}</p>
             </div>
+
+            <div className={styles.philosophyNote}>
+              <span className="tag-mono">filosofía // human first</span>
+              <p>{t('roi.philosophy.note')}</p>
+            </div>
           </div>
 
           <div className={`${styles.calc} glow-card reveal stagger-1`} onMouseMove={onMove}>

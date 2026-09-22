@@ -125,6 +125,26 @@ export default {
   'faq.a5': 'We support the production rollout, monitor metrics and leave documentation. You can hire ongoing support or keep an internal team we have trained.',
   'faq.q6': 'Who do I talk to during the project?',
   'faq.a6': 'The people writing the code. We are three co-founding engineers with no middle managers: communication is direct via WhatsApp, email or video call.',
+  'faq.q7': 'Does your AI and automation approach aim to replace our employees?',
+  'faq.a7': 'Quite the opposite. Our foundational philosophy is Human First, AI Assisted. We never build technology to displace people, but to eliminate the friction of repetitive manual processes that drain hours from their workday. AI acts as an accelerator that automates mechanical overhead, reducing turnaround times from days to minutes and empowering your workforce to focus on irreplaceable human value: judgment, strategy, and customer relationships.',
+
+  // PHILOSOPHY HUMAN FIRST, AI ASSISTED
+  'why.philosophy.badge': 'Operating philosophy',
+  'why.philosophy.title': 'Automate repetitive friction, empower your people',
+  'why.philosophy.desc':  'We firmly champion a Human First, AI Assisted approach: technology is not here to displace your staff, but to eliminate the mechanical drag of repetitive daily tasks. We identify repetitive bottlenecks that consume hours of manual work and automate them with applied AI and custom software, drastically reducing operational times and empowering your team to focus on irreplaceable high-value work: strategy, human judgment, and customer care.',
+  'why.philosophy.m1.val': '0%',
+  'why.philosophy.m1.lbl': 'Staff replacement',
+  'why.philosophy.m2.val': 'Hours ➔ Min',
+  'why.philosophy.m2.lbl': 'On repetitive workflows',
+  'why.p5.title':         'Human First, AI Assisted',
+  'why.p5.desc':          'AI assists and multiplies; it never replaces. We automate repetitive workflows to accelerate operational turnaround and empower human talent.',
+
+  // SERVICES ENHANCEMENT
+  'services.ai.title':    'Applied AI & workflow automation',
+  'services.ai.desc':     'Human First, AI Assisted philosophy: we detect repetitive manual workflows to automate them with applied AI, drastically cutting turnaround times while empowering your workforce.',
+
+  // ROI CALCULATOR
+  'roi.philosophy.note':  'Recovering hours does not mean replacing people; it means giving your team back the time they lose to repetitive tasks so they can focus on judgment, clients, and innovation.',
 
   // FORM / CTA
   'form.prefilled': 'We loaded your estimate into the message. Review your details and send.',

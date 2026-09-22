@@ -125,6 +125,26 @@ export default {
   'faq.a5': 'Acompañamos la puesta en producción, monitoreamos métricas y dejamos documentación. Puedes contratar soporte continuo o quedarte con un equipo interno capacitado por nosotros.',
   'faq.q6': '¿Con quién hablo durante el proyecto?',
   'faq.a6': 'Con quienes escriben el código. Somos tres ingenieros cofundadores y no hay gestores intermedios: la comunicación es directa por WhatsApp, correo o videollamada.',
+  'faq.q7': '¿Su enfoque de IA y automatización busca sustituir a nuestros empleados?',
+  'faq.a7': 'Todo lo contrario. Nuestra filosofía innegociable es Human First, AI Assisted. No trabajamos para reemplazar personas, sino para eliminar el desgaste de los procesos manuales y repetitivos que consumen horas de su jornada. La IA actúa como un copiloto que automatiza la carga mecánica, reduciendo tiempos de días a minutos y permitiendo que tus colaboradores se concentren en el criterio humano, la estrategia y la atención al cliente.',
+
+  // FILOSOFÍA HUMAN FIRST, AI ASSISTED
+  'why.philosophy.badge': 'Filosofía operativa',
+  'why.philosophy.title': 'Automatizar procesos repetitivos, no sustituir personas',
+  'why.philosophy.desc':  'Creemos firmemente en el enfoque Human First, AI Assisted: la tecnología no está para desplazar a tus colaboradores, sino para eliminar la fricción mecánica de su día a día. Detectamos los procesos repetitivos que consumen horas en hojas de cálculo y trámites manuales para automatizarlos con IA y software a la medida, reduciendo tiempos drásticamente y liberando a tu equipo para lo que realmente importa: el criterio, la estrategia y la relación con tus clientes.',
+  'why.philosophy.m1.val': '0%',
+  'why.philosophy.m1.lbl': 'Sustitución de personas',
+  'why.philosophy.m2.val': 'Horas ➔ Min',
+  'why.philosophy.m2.lbl': 'En procesos repetitivos',
+  'why.p5.title':         'Human First, AI Assisted',
+  'why.p5.desc':          'La IA asiste y multiplica; no reemplaza. Eliminamos tareas repetitivas para reducir tiempos operativos y potenciar el talento humano.',
+
+  // SERVICES ENHANCEMENT
+  'services.ai.title':    'IA aplicada & automatización de flujos',
+  'services.ai.desc':     'Filosofía Human First, AI Assisted: detectamos procesos repetitivos para automatizarlos con inteligencia artificial, reduciendo drásticamente tiempos operativos sin desplazar el talento de tu equipo.',
+
+  // CALCULADORA ROI
+  'roi.philosophy.note':  'Recuperar horas no significa prescindir de personas: significa devolverle a tu equipo el tiempo que hoy pierde en tareas repetitivas para que lo dediquen al criterio, los clientes y la innovación.',
 
   // FORM / CTA
   'form.prefilled': 'Cargamos tu estimado en el mensaje. Revisa tus datos y envía.',

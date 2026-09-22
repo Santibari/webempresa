@@ -6,7 +6,7 @@ import MagneticButton from './ui/MagneticButton.jsx'
 import { Plus } from './ui/Icons.jsx'
 import styles from './Faq.module.css'
 
-const ITEMS = [1, 2, 3, 4, 5, 6]
+const ITEMS = [1, 2, 3, 4, 5, 6, 7]
 
 export default function Faq() {
   const { t } = useLang()

@@ -65,7 +65,7 @@ export default function Services() {
           <a href="#roi" className={`glow-card ${styles.card} ${styles.c3} reveal stagger-3`}>
             <span className={styles.watermark} aria-hidden="true">03</span>
             <div className={styles.cardTop}>
-              <span className="tag-mono">03 · analítica</span>
+              <span className="tag-mono">03 · human first // ai</span>
               <span className={styles.go}><ArrowUpRight /></span>
             </div>
             <div className={styles.cardBody}>
@@ -73,8 +73,8 @@ export default function Services() {
               <p>{t('services.ai.desc')}</p>
             </div>
             <div className={styles.metric}>
-              <span className="tag-mono">entrenamiento</span>
-              <b>datos propios</b>
+              <span className="tag-mono">propósito</span>
+              <b>automatizar lo repetitivo</b>
             </div>
             <span className={styles.cardCta}>{t('services.ctaRoi')}</span>
           </a>
