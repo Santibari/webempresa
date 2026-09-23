@@ -10,13 +10,14 @@ export const LOGO_SRC = ''
 
 import pabloPhoto from '../assets/images/founders/pablo-boada.jpeg'
 import juanPhoto from '../assets/images/founders/juan-henao.png'
+import santiagoPhoto from '../assets/images/founders/santiago-bazzani.png'
 
 // ── FUNDADORES ────────────────────────────────────────────
 // photo: ruta o import de la imagen
 // Deja photo: '' para mostrar las iniciales
 export const FOUNDERS = [
   { name: 'Pablo Boada',      initials: 'PB', photo: pabloPhoto },
-  { name: 'Santiago Bazzani', initials: 'SB', photo: '' },
+  { name: 'Santiago Bazzani', initials: 'SB', photo: santiagoPhoto },
   { name: 'Juan David Henao', initials: 'JH', photo: juanPhoto },
 ]
 

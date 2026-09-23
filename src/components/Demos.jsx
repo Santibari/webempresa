@@ -77,13 +77,13 @@ export default function Demos() {
                   </svg>
                   <span>Mención Informativa</span>
                 </div>
-                <div className={styles.infoCardHeading}>{demo.title}</div>
+                <div className={styles.infoCardHeading}>Proyecto en producción</div>
                 <p className={styles.infoCardNote}>
-                  Plataforma y sitio web en producción continua. Muestra visual restringida por protocolos de protección y privacidad institucional.
+                  Sitio web y plataforma educativa con acceso institucional restringido.
                 </p>
                 <div className={styles.infoCardStatus}>
                   <span className={styles.statusDot}></span>
-                  <span>Producción verificada // Acceso institucional</span>
+                  <span>Plataforma activa // Acceso institucional</span>
                 </div>
               </div>
             </div>
