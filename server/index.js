@@ -32,7 +32,7 @@ app.post('/api/contact', async (req, res) => {
 
     await sendContactEmail({ nombre, empresa, email, telefono, interes, mensaje })
 
-    console.log(`[POST /api/contact] Correo enviado exitosamente a: ${process.env.EMAIL_TO || process.env.GMAIL_USER}`)
+    console.log('[POST /api/contact] Correo enviado exitosamente a: hello@aikatacol.online')
 
     return res.status(200).json({
       ok: true,
@@ -49,5 +49,5 @@ app.post('/api/contact', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`\n🚀 Servidor Aikata Backend escuchando en http://localhost:${PORT}`)
-  console.log(`📬 Correo configurado para notificaciones: ${process.env.EMAIL_TO || process.env.GMAIL_USER}`)
+  console.log('📬 Correo configurado para notificaciones: hello@aikatacol.online')
 })

@@ -189,7 +189,9 @@ export default async function handler(req, res) {
 
     const user = process.env.GMAIL_USER || 'hello@aikatacol.online'
     const pass = (process.env.GMAIL_APP_PASSWORD || '').replace(/\s+/g, '')
-    const recipient = process.env.EMAIL_TO || user
+    // Las credenciales GMAIL_USER autentican el envío; el destino de
+    // notificaciones del formulario es siempre el correo corporativo.
+    const recipient = 'hello@aikatacol.online'
 
     if (!pass) {
       return res.status(500).json({

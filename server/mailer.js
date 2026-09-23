@@ -5,7 +5,9 @@ export async function sendContactEmail(formData) {
   const { nombre, empresa, email } = formData
   const user = process.env.GMAIL_USER || 'Santiagobazzanir@gmail.com'
   const pass = (process.env.GMAIL_APP_PASSWORD || '').replace(/\s+/g, '')
-  const recipient = process.env.EMAIL_TO || user
+  // Las credenciales GMAIL_USER autentican el envío; el destino de
+  // notificaciones del formulario es siempre el correo corporativo.
+  const recipient = 'hello@aikatacol.online'
 
   if (!pass) {
     console.warn('\n⚠️ [Aikata Backend] AVISO: No se ha configurado GMAIL_APP_PASSWORD en server/.env.')
