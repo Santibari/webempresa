@@ -32,19 +32,17 @@ export const LOGOS = [
   { id: 6, label: 'Aliado 2',  src: '' },
 ]
 
-import holyFamilyImg from '../assets/images/demos/holyfamily.png'
-
 // ── DEMOS DE PROYECTOS ────────────────────────────────────
-// img:  ruta o import de imagen
-// link: URL externa del proyecto en producción
+// img:  ruta o import de imagen (vacío para mención informativa)
+// link: URL externa del proyecto (vacío si no tiene enlace saliente)
 export const DEMOS = [
   {
     id: 1,
     badge: 'Web & Plataforma Educativa',
     title: 'Holy Family Preschool',
     desc: 'Sitio web oficial y plataforma digital desarrollada para Holy Family Preschool. Arquitectura moderna, diseño de alta fidelidad, interactividad y optimización de rendimiento.',
-    img: holyFamilyImg,
-    link: 'https://www.holyfamily.com.co/',
+    img: '',
+    link: '',
     status: 'Entregado y activo',
   },
 ]

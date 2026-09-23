@@ -187,7 +187,7 @@ export default async function handler(req, res) {
       })
     }
 
-    const user = process.env.GMAIL_USER || 'aikatasascolombia@gmail.com'
+    const user = process.env.GMAIL_USER || 'hello@aikatacol.online'
     const pass = (process.env.GMAIL_APP_PASSWORD || '').replace(/\s+/g, '')
     const recipient = process.env.EMAIL_TO || user
 
