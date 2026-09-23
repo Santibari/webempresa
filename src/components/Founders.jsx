@@ -45,7 +45,7 @@ export default function Founders() {
   const sectionRef = useScrollReveal({ threshold: 0.1 })
 
   const founderSpecs = {
-    'Pablo Boada': 'arquitectura web & interfaces',
+    'Pablo Boada': 'Forard Deployed Engineering, arquitectura web & interfaces',
     'Santiago Bazzani': 'backend & sistemas de datos',
     'Juan David Henao': 'infraestructura & despliegue',
   }
