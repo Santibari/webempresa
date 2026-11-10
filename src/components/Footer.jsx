@@ -30,7 +30,7 @@ export default function Footer() {
             <div className={styles.footerCol}>
               <h4>{t('footer.contact')}</h4>
               <a href="mailto:hello@aikatacol.online">hello@aikatacol.online</a>
-              <a href="https://wa.me/573053704481" target="_blank" rel="noopener noreferrer">+57 305 370 4481</a>
+              <a href="https://wa.me/573216582081" target="_blank" rel="noopener noreferrer">+57 321 6582081</a>
             </div>
           </div>
         </div>

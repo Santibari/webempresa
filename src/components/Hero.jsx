@@ -105,7 +105,7 @@ export default function Hero() {
                   <span className={styles.ln}>03</span>  philosophy: <span className={styles.str}>'Human First · AI Assisted'</span>;{'\n'}
                   <span className={styles.ln}>04</span>  focus: <span className={styles.str}>'Repetitive Process Automation'</span>;{'\n'}
                   <span className={styles.ln}>05</span>  firstPilot: <span className={styles.num}>3</span> <span className={styles.cm}>// {t('hero.weeks')}</span>{'\n'}
-                  <span className={styles.ln}>06</span>  ownership: <span className={styles.num}>100</span>%;{'\n'}
+                  <span className={styles.ln}>06</span>  iteration: <span className={styles.str}>'weekly'</span>;{'\n'}
                   <span className={styles.ln}>07</span>  partnership: <span className={styles.ty}>AikataCompanion</span>;{'\n'}
                   <span className={styles.ln}>08</span>{'}'}
                 </pre>

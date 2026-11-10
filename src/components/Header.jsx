@@ -7,7 +7,7 @@ import MagneticButton from './ui/MagneticButton.jsx'
 import { Sun, Moon, Menu, X, WhatsApp, ArrowRight } from './ui/Icons.jsx'
 import styles from './Header.module.css'
 
-const WA_URL = 'https://wa.me/573053704481?text=Hola%20Aikata%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20t%C3%A9cnico'
+const WA_URL = 'https://wa.me/573216582081?text=Hola%20Aikata%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20t%C3%A9cnico'
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme()

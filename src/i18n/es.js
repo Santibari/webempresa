@@ -17,7 +17,7 @@ export default {
   'hero.ctaSec':     'Explorar servicios',
   'hero.proof1':     'proyectos en producción',
   'hero.proof2':     'semanas para el primer piloto',
-  'hero.proof3':     'código propietario a la medida',
+  'hero.proof3':     'software a la medida y documentado',
 
   // SERVICES
   'services.kicker': 'Especialidades técnicas',
@@ -60,7 +60,7 @@ export default {
   // FOUNDERS
   'founders.kicker': 'Equipo técnico',
   'founders.title':  'Tres ingenieros detrás de cada proyecto',
-  'founders.desc':   'Egresados de ingeniería que aplican método, rigor y buenas prácticas de código en cada entrega técnica.',
+  'founders.desc':   'Estudiantes de 8.º semestre de Ingeniería Informática que aplican método, rigor y buenas prácticas de código en cada entrega técnica.',
   'founders.role':   'Cofundador',
   'founders.tag':    'Ingeniería de software',
 
@@ -103,7 +103,7 @@ export default {
   'form.ph.name':         'Ej. María Gómez',
   'form.ph.business':     'Ej. Distribuidora Central',
   'form.ph.email':        'contacto@empresa.com',
-  'form.ph.phone':        '305 370 4481',
+  'form.ph.phone':        '300 123 4567',
   'form.ph.message':      'Ej. Necesitamos conectar nuestra base de datos con un panel administrativo...',
   'form.submit':          'Solicitar sesión técnica gratuita',
   'form.sending':         'Enviando...',

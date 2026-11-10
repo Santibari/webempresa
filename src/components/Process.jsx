@@ -71,8 +71,8 @@ export default function Process() {
                   <span className={styles.tValue}>alertas y métricas en vivo</span>
                 </div>
                 <div className={styles.telemetryItem}>
-                  <span className={styles.tLabel}>propiedad</span>
-                  <span className={styles.tValue}>repositorio 100% del cliente</span>
+                  <span className={styles.tLabel}>documentación</span>
+                  <span className={styles.tValue}>técnica y de usuario, entregada</span>
                 </div>
                 <div className={styles.telemetryItem}>
                   <span className={styles.tLabel}>soporte</span>

@@ -17,7 +17,7 @@ export default {
   'hero.ctaSec':     'Explore services',
   'hero.proof1':     'systems in production',
   'hero.proof2':     'weeks to first live pilot',
-  'hero.proof3':     'bespoke proprietary code',
+  'hero.proof3':     'bespoke, documented software',
 
   // SERVICES
   'services.kicker': 'Technical capabilities',
@@ -60,7 +60,7 @@ export default {
   // FOUNDERS
   'founders.kicker': 'Founding engineers',
   'founders.title':  'Three engineers behind every deployment',
-  'founders.desc':   'Engineering graduates applying formal discipline, architectural rigor, and clean code principles to every project.',
+  'founders.desc':   '8th-semester Computer Engineering students applying formal discipline, architectural rigor, and clean code principles to every project.',
   'founders.role':   'Co-founder',
   'founders.tag':    'Software engineering',
 
@@ -103,7 +103,7 @@ export default {
   'form.ph.name':         'e.g. Maria Gomez',
   'form.ph.business':     'e.g. Logistics Corp',
   'form.ph.email':        'contact@company.com',
-  'form.ph.phone':        '+57 305 370 4481',
+  'form.ph.phone':        '+57 300 123 4567',
   'form.ph.message':      'e.g. We need to integrate our ERP database with a real-time web portal...',
   'form.submit':          'Request free technical session',
   'form.sending':         'Submitting...',
